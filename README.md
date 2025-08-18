@@ -6,7 +6,7 @@ It showcases top-rated attractions, markets, tours, and experiences across **Ban
 ## ✅ Live Site
 
 Once deployed via GitHub Pages, access the live guide here:  
-**https://tw-South Korea.github.io/GJN-2025-attractions/**
+**https://tw-south-korea.github.io/GJN-2025-activities/**
 
 ## ✨ Features
 
