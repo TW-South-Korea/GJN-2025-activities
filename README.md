@@ -1,12 +1,12 @@
-# 🏝️ Thailand Attractions Guide 2025
+# 🎯 South Korea Activities Guide 2025
 
-This repository contains a mobile-friendly, collapsible attractions guide for your 2025 Thailand adventure.  
+This repository contains a mobile-friendly, collapsible attractions guide for your 2025 South Korea adventure.  
 It showcases top-rated attractions, markets, tours, and experiences across **Bangkok** and **Phuket**—organised in an intuitive, structured format.
 
 ## ✅ Live Site
 
 Once deployed via GitHub Pages, access the live guide here:  
-**https://tw-thailand.github.io/GJN-2025-attractions/**
+**https://tw-South Korea.github.io/GJN-2025-attractions/**
 
 ## ✨ Features
 
