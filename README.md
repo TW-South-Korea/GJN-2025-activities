@@ -1,7 +1,7 @@
-# 🎯 South Korea Activities Guide 2025
+# 🎎 South Korea Activities Guide 2025
 
-This repository contains a mobile-friendly, collapsible attractions guide for your 2025 South Korea adventure.  
-It showcases top-rated attractions, markets, tours, and experiences across **Bangkok** and **Phuket**—organised in an intuitive, structured format.
+This repository contains a mobile-friendly activities information for Korea.
+It showcases top-rated attractions, markets, tours, and experiences across **Seoul** and **Busan** — organised in an intuitive, structured format.
 
 ## ✅ Live Site
 
@@ -10,13 +10,13 @@ Once deployed via GitHub Pages, access the live guide here:
 
 ## ✨ Features
 
-* **Collapsible city and destination sections**: Each city (e.g. Bangkok, Phuket) and each destination within them is now independently collapsible
+* **Collapsible city and destination sections**: Each city (e.g. Seoul, Busan) and each destination within them is now independently collapsible
 * **Structured formatting** with:
 
-  * Independent destination sections for improved navigation (e.g. “Destination – MBK CENTER”)
+  * Independent destination sections for improved navigation (e.g. “Destination – Busan”)
   * Clickable attraction links and Google Maps directions
   * Clear time fields (When, Hours, Travel Time)
-  * Dual currency support (Price – ฿ / $)
+  * Dual currency support (Price – ₩ / $)
 
 * **Mobile-optimised** for ease of scrolling and readability
 * **Responsive layout** with compact column widths for minimal swiping
