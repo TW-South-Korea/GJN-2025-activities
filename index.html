@@ -64,6 +64,17 @@
   table:not(.activity-table) thead th{position:sticky; top:0}
 }
 
+
+/* --- Mobile optimisation: stack shopping tables like activities --- */
+@media (max-width: 780px){
+  .shopping-table thead{display:none}
+  .shopping-table, .shopping-table tbody, .shopping-table tr, .shopping-table td{display:block; width:100%}
+  .shopping-table tr{margin:0 0 0.8em; padding:0.6em; background:var(--card); border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .shopping-table td{border:0; border-bottom:1px solid #eee; padding:0.5em 0}
+  .shopping-table td:last-child{border-bottom:0}
+  .shopping-table td::before{content:attr(data-label); font-weight:700; display:block; opacity:.7; margin-bottom:2px}
+}
+
 </style>
 </head>
 <body>
@@ -159,14 +170,14 @@
 
     <details>
       <summary style="font-weight: normal; color: darkblue;">Ginza</summary>
-      <table>
+      <table class="shopping-table">
         <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
         <tbody>
           <tr>
-            <td><a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Ginza</a></td>
-            <td style="font-weight: normal;">Luxury shopping district featuring flagship stores and department stores.</td>
-            <td><a href="https://youtu.be/qsUSlUT8B3c" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td><a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+            <td data-label="Activity: "><a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Ginza</a></td>
+            <td data-label="About: " style="font-weight: normal;">Luxury shopping district featuring flagship stores and department stores.</td>
+            <td data-label="Activity: "><a href="https://youtu.be/qsUSlUT8B3c" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td data-label="Activity: "><a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
           </tr>
         </tbody>
       </table>
@@ -174,14 +185,14 @@
 
     <details>
       <summary style="font-weight: normal; color: darkblue;">Shibuya 109</summary>
-      <table>
+      <table class="shopping-table">
         <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
         <tbody>
           <tr>
-            <td><a href="https://www.gotokyo.org/en/spot/66/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Shibuya 109</a></td>
-            <td style="font-weight: normal;">Trendy fashion mall catering to youth culture in Shibuya.</td>
-            <td><a href="https://youtu.be/OxxBWyGygls" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td><a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+            <td data-label="Activity: "><a href="https://www.gotokyo.org/en/spot/66/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Shibuya 109</a></td>
+            <td data-label="About: " style="font-weight: normal;">Trendy fashion mall catering to youth culture in Shibuya.</td>
+            <td data-label="Activity: "><a href="https://youtu.be/OxxBWyGygls" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td data-label="Activity: "><a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
           </tr>
         </tbody>
       </table>
@@ -189,14 +200,14 @@
 
     <details>
       <summary style="font-weight: normal; color: darkblue;">Harajuku Takeshita Street</summary>
-      <table>
+      <table class="shopping-table">
         <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
         <tbody>
           <tr>
-            <td><a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Harajuku Takeshita Street</a></td>
-            <td style="font-weight: normal;">Youth fashion and colourful subculture shops in a pedestrian‑only alley.</td>
-            <td><a href="https://youtu.be/p9poky-szGw" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td><a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+            <td data-label="Activity: "><a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Harajuku Takeshita Street</a></td>
+            <td data-label="About: " style="font-weight: normal;">Youth fashion and colourful subculture shops in a pedestrian‑only alley.</td>
+            <td data-label="Activity: "><a href="https://youtu.be/p9poky-szGw" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td data-label="Activity: "><a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
           </tr>
         </tbody>
       </table>
@@ -204,14 +215,14 @@
 
     <details>
       <summary style="font-weight: normal; color: darkblue;">Omotesando</summary>
-      <table>
+      <table class="shopping-table">
         <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
         <tbody>
           <tr>
-            <td><a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Omotesando</a></td>
-            <td style="font-weight: normal;">Tokyo's upscale shopping boulevard with elegant flagship stores.</td>
-            <td><a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td><a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+            <td data-label="Activity: "><a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Omotesando</a></td>
+            <td data-label="About: " style="font-weight: normal;">Tokyo's upscale shopping boulevard with elegant flagship stores.</td>
+            <td data-label="Activity: "><a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td data-label="Activity: "><a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
           </tr>
         </tbody>
       </table>
@@ -219,14 +230,14 @@
 
     <details>
       <summary style="font-weight: normal; color: darkblue;">Nakamise Shopping Street (Asakusa)</summary>
-      <table>
+      <table class="shopping-table">
         <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
         <tbody>
           <tr>
-            <td><a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Nakamise Shopping Street (Asakusa)</a></td>
-            <td style="font-weight: normal;">Traditional market street with snacks, crafts, and souvenirs.</td>
-            <td><a href="https://www.youtube.com/watch?v=g_CAMut_8MY" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td><a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+            <td data-label="Activity: "><a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Nakamise Shopping Street (Asakusa)</a></td>
+            <td data-label="About: " style="font-weight: normal;">Traditional market street with snacks, crafts, and souvenirs.</td>
+            <td data-label="Activity: "><a href="https://www.youtube.com/watch?v=g_CAMut_8MY" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td data-label="Activity: "><a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
           </tr>
         </tbody>
       </table>
