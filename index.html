@@ -28,9 +28,22 @@
     /* Relax widths on small screens */
     .activity-table th, .activity-table td,
     .simple-table th, .simple-table td{width:auto !important;min-width:0}
-  }
   /* Improve min-width for long URLs on desktop */
   td a{word-break:break-word}
+
+/* --- Mobile optimisation: stack table rows into cards (<=780px) --- */
+@media (max-width: 780px){
+  h1{font-size:1.8rem;line-height:1.2}
+  details{padding:0.8em}
+  .activity-table thead{display:none}
+  .activity-table, .activity-table tbody, .activity-table tr, .activity-table td{display:block; width:100%}
+  .activity-table tr{margin:0 0 0.8em; padding:0.6em; background:var(--card); border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .activity-table td{border:0; border-bottom:1px solid #eee; padding:0.5em 0}
+  .activity-table td:last-child{border-bottom:0}
+  .activity-table td::before{content:attr(data-label); font-weight:700; display:block; opacity:.7; margin-bottom:2px}
+  .activity-table a{word-break:break-word}
+}
+
 </style>
 </head>
 <body>
