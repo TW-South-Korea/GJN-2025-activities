@@ -44,6 +44,26 @@
   .activity-table a{word-break:break-word}
 }
 
+
+/* --- Mobile tuning specifically for ⭐ Shopping tables (do not affect .activity-table) --- */
+@media (max-width: 780px){
+  /* Only apply to tables that are NOT .activity-table */
+  table:not(.activity-table){
+    table-layout:auto !important;
+    width:100%;
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  table:not(.activity-table) thead th,
+  table:not(.activity-table) td{
+    white-space:normal;
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  table:not(.activity-table) thead th{position:sticky; top:0}
+}
+
 </style>
 </head>
 <body>
