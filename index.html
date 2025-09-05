@@ -44,37 +44,6 @@
   .activity-table a{word-break:break-word}
 }
 
-
-/* --- Mobile tuning specifically for ⭐ Shopping tables (do not affect .activity-table) --- */
-@media (max-width: 780px){
-  /* Only apply to tables that are NOT .activity-table */
-  table:not(.activity-table){
-    table-layout:auto !important;
-    width:100%;
-    display:block;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-  table:not(.activity-table) thead th,
-  table:not(.activity-table) td{
-    white-space:normal;
-    word-break:normal;
-    overflow-wrap:anywhere;
-  }
-  table:not(.activity-table) thead th{position:sticky; top:0}
-}
-
-
-/* --- Mobile optimisation: stack shopping tables like activities --- */
-@media (max-width: 780px){
-  .shopping-table thead{display:none}
-  .shopping-table, .shopping-table tbody, .shopping-table tr, .shopping-table td{display:block; width:100%}
-  .shopping-table tr{margin:0 0 0.8em; padding:0.6em; background:var(--card); border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06)}
-  .shopping-table td{border:0; border-bottom:1px solid #eee; padding:0.5em 0}
-  .shopping-table td:last-child{border-bottom:0}
-  .shopping-table td::before{content:attr(data-label); font-weight:700; display:block; opacity:.7; margin-bottom:2px}
-}
-
 </style>
 </head>
 <body>
@@ -159,91 +128,143 @@
           </tr>
         </tbody>
       </table>
+    
+
+    
+</details>
+<!-- Added: Busan activities batch (nested) -->
+<details>
+      <summary style="font-weight: normal; color: darkblue;">Busan Air Cruise – Songdo Marine Cable Car</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Scenic Transport – Busan Air Cruise</td>
+            <td data-label="When: ">Date – TBC (11–14 Sep 2025)</td>
+            <td data-label="Price: ">$20.25 (pp) / $40.50 (2 ppl)</td>
+            <td data-label="Description: ">Busan Air Cruise – Songdo Marine Cable Car<br/><br/>Ride Korea’s longest marine cable car over Songdo Beach. Choose between a Crystal Cabin (glass floor) or General Cabin. Enjoy scenic views of Songdo Skywalk, Namhang Bridge, and Dino Adventure.<br/><br/><strong>Tour Duration:</strong> 1–1.5 hours (self-guided).<br/><strong>Start Point:</strong> Songdo Bay Station (Solbat Park) or Amnam Park Station.<br/><strong>What’s Included:</strong> Round-trip cable car ticket.<br/><strong>Booking Note:</strong> Must book at least one day in advance. Children under 3 ride free with passport.</td>
+            <td data-label="Hours: ">1–1.5 hours</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">—</td>
+            <td data-label="Booking: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1044940&cityId=17172&cid=1908612&travelDate=2025-09-11" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: ">—</td>
+            <td data-label="Directions: ">Start at Songdo Bay Station (Solbat Park) or Amnam Park Station.</td>
+          </tr>
+        </tbody>
+      </table>
     </details>
+
+<details>
+      <summary style="font-weight: normal; color: darkblue;">Old Korea Thousand History Tour of Gyeongju (from Busan)</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Tour – Gyeongju UNESCO Heritage Day Tour</td>
+            <td data-label="When: ">Date – TBC (11–14 Sep 2025)</td>
+            <td data-label="Price: ">$63.33 (pp) / $126.66 (2 ppl)</td>
+            <td data-label="Description: ">Gyeongju UNESCO Heritage Day Tour<br/><br/>Explore Gyeongju’s UNESCO-listed cultural sites including Bulguksa Temple, Gyochon Village, Daereungwon Tombs, Hwangridan‑gil, Anapji Pond, and the illuminated Woljeonggyo Bridge.<br/><br/><strong>Tour Duration:</strong> Full day (~12 hours).<br/><strong>What’s Included:</strong> Guided tour, round-trip transport from Busan, admission fees.<br/><strong>Pickup Points:</strong> Busan, Seomyeon, or Haeundae Stations. Seasonal departures apply.</td>
+            <td data-label="Hours: ">~12 hours</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">—</td>
+            <td data-label="Booking: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1036319&cityId=17172&cid=1908612&travelDate=2025-09-11" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: ">—</td>
+            <td data-label="Directions: ">Pickup at Busan / Seomyeon / Haeundae Stations (per booking confirmation).</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+<details>
+      <summary style="font-weight: normal; color: darkblue;">Busan Tower Observatory</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Site – Busan Tower</td>
+            <td data-label="When: ">Date – TBC (11–14 Sep 2025)</td>
+            <td data-label="Price: ">$10.53 (pp) / $21.06 (2 ppl)</td>
+            <td data-label="Description: ">Busan Tower<br/><br/>Located in Yongdusan Park, Busan Tower offers sweeping views over Busan Port and Yeongdo. Nearby landmarks include Admiral Yi Sun‑sin Statue and the Flower Clock.<br/><br/><strong>Tour Duration:</strong> Flexible, self-guided.<br/><strong>Access:</strong> Entry valid on reserved date. Located near Nampo Station (Exit 7).<br/><strong>What’s Included:</strong> Tower admission, observatory access, and photo zones.</td>
+            <td data-label="Hours: ">Flexible</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">—</td>
+            <td data-label="Booking: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1124442&cityId=17172&cid=1908612&travelDate=2025-09-11" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: ">—</td>
+            <td data-label="Directions: ">Yongdusan Park (near Nampo Station Exit 7).</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+<details>
+      <summary style="font-weight: normal; color: darkblue;">Busan X the Sky – LCT Tower Observatory</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Site – Busan X the Sky</td>
+            <td data-label="When: ">Date – TBC (11–14 Sep 2025)</td>
+            <td data-label="Price: ">$14.28 (pp) / $28.56 (2 ppl)</td>
+            <td data-label="Description: ">Busan X the Sky (LCT Tower)<br/><br/>Visit Korea’s highest observatory on floors 98–100 of the LCT Tower. Attractions include a 360° city view, Skywalk (glass floor), Sky X Show, Sky Wave, Sky Garden, and dining at Sky 99.<br/><br/><strong>Tour Duration:</strong> 1–1.5 hours (self-guided).<br/><strong>Access:</strong> Entry valid on reserved date. Free on-site parking for 2 hours.<br/><strong>What’s Included:</strong> Access to all digital and viewing zones. Night views are recommended.</td>
+            <td data-label="Hours: ">1–1.5 hours</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">—</td>
+            <td data-label="Booking: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1043872&cityId=17172&cid=1908612&travelDate=2025-09-11" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: ">—</td>
+            <td data-label="Directions: ">LCT Tower (Haeundae). Night visit recommended for city lights.</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+<details>
+      <summary style="font-weight: normal; color: darkblue;">Centum City Spa Land (Shinsegae Centum City)</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Relaxation – Spa Land</td>
+            <td data-label="When: ">Date – TBC (11–14 Sep 2025)</td>
+            <td data-label="Price: ">$19.58 (pp) / $39.16 (2 ppl)</td>
+            <td data-label="Description: ">Centum City Spa Land – Shinsegae Centum City<br/><br/>Relax in over a dozen themed zones including Korean Bulgama, Finnish saunas, Japanese‑style baths, and Roman‑inspired facilities. Ideal for a half‑day wellness break.<br/><br/><strong>Tour Duration:</strong> Max. 4 hours (self-guided). Last entry 1 hour before closing.<br/><strong>Opening Hours (Jul–Aug 2025):</strong> 8:00 AM – 11:00 PM.<br/><strong>What’s Included:</strong> Entry to saunas, baths, and lounges. Extra charges apply beyond 4 hours.</td>
+            <td data-label="Hours: ">Up to 4 hours</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">—</td>
+            <td data-label="Booking: "><a href="https://www.shinsegae.com/store/entertainment/centum-spaland.do?storeCd=SC00008#focus_move" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1328846&cityId=17172&cid=1908612&enrichedOfferId=1745779&pax=8_1&offerOptionId=0&travelDate=2025-09-11" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Directions: ">Shinsegae Centum City. Arrive ≥1 hour before closing; max stay 4 hours.</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+</details>
 
 
     <!-- Osaka Castle (kept once) --><!-- Universal Studios Japan (kept once) --></details>
 
   <!-- Shopping (deduplicated; appears once in the whole document) -->
-  <details>
-    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Shopping</summary>
-
-    <details>
-      <summary style="font-weight: normal; color: darkblue;">Ginza</summary>
-      <table class="shopping-table">
-        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
-        <tbody>
-          <tr>
-            <td data-label="Activity: "><a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Ginza</a></td>
-            <td data-label="About: " style="font-weight: normal;">Luxury shopping district featuring flagship stores and department stores.</td>
-            <td data-label="Activity: "><a href="https://youtu.be/qsUSlUT8B3c" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td data-label="Activity: "><a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-
-    <details>
-      <summary style="font-weight: normal; color: darkblue;">Shibuya 109</summary>
-      <table class="shopping-table">
-        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
-        <tbody>
-          <tr>
-            <td data-label="Activity: "><a href="https://www.gotokyo.org/en/spot/66/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Shibuya 109</a></td>
-            <td data-label="About: " style="font-weight: normal;">Trendy fashion mall catering to youth culture in Shibuya.</td>
-            <td data-label="Activity: "><a href="https://youtu.be/OxxBWyGygls" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td data-label="Activity: "><a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-
-    <details>
-      <summary style="font-weight: normal; color: darkblue;">Harajuku Takeshita Street</summary>
-      <table class="shopping-table">
-        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
-        <tbody>
-          <tr>
-            <td data-label="Activity: "><a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Harajuku Takeshita Street</a></td>
-            <td data-label="About: " style="font-weight: normal;">Youth fashion and colourful subculture shops in a pedestrian‑only alley.</td>
-            <td data-label="Activity: "><a href="https://youtu.be/p9poky-szGw" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td data-label="Activity: "><a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-
-    <details>
-      <summary style="font-weight: normal; color: darkblue;">Omotesando</summary>
-      <table class="shopping-table">
-        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
-        <tbody>
-          <tr>
-            <td data-label="Activity: "><a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Omotesando</a></td>
-            <td data-label="About: " style="font-weight: normal;">Tokyo's upscale shopping boulevard with elegant flagship stores.</td>
-            <td data-label="Activity: "><a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td data-label="Activity: "><a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-
-    <details>
-      <summary style="font-weight: normal; color: darkblue;">Nakamise Shopping Street (Asakusa)</summary>
-      <table class="shopping-table">
-        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
-        <tbody>
-          <tr>
-            <td data-label="Activity: "><a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Nakamise Shopping Street (Asakusa)</a></td>
-            <td data-label="About: " style="font-weight: normal;">Traditional market street with snacks, crafts, and souvenirs.</td>
-            <td data-label="Activity: "><a href="https://www.youtube.com/watch?v=g_CAMut_8MY" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
-            <td data-label="Activity: "><a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-  </details>
-</details>
+  
 
 <!-- SEOUL -->
 <details>
