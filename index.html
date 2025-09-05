@@ -1,1092 +1,279 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-   🎎 Korea Activities Guide 2025
-  </title>
-<link href="/GJN-2025-activities/assets/manifest.json" rel="manifest"/>
-<link href="/GJN-2025-activities/assets/icons/icon-192x192.png" rel="icon" type="image/png"/>
-<link href="/GJN-2025-activities/assets/icons/icon-192x192.png" rel="apple-touch-icon"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>🎎 Korea Activities Guide 2025</title>
+<link rel="manifest" href="/GJN-2025-activities/assets/manifest.json"/>
+<link rel="icon" type="image/png" href="/GJN-2025-activities/assets/icons/icon-192x192.png"/>
+<link rel="apple-touch-icon" href="/GJN-2025-activities/assets/icons/icon-192x192.png"/>
 <style>
-   body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      padding: 1em;
-    }
-    h1 {
-      text-align: center;
-    }
-    details {
-      margin-bottom: 1.5em;
-      background: white;
-      border-radius: 8px;
-      padding: 1em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    summary {
-      font-size: 1.2em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1em;
-  table-layout: fixed;
-}
-
-th, td {
-  padding: 0.5em;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-  word-wrap: break-word;
-}
-
-
-th:nth-child(1), td:nth-child(1) { width: 13%; }  /* Name */
-th:nth-child(2), td:nth-child(2) { width: 9%; }   /* When */
-th:nth-child(3), td:nth-child(3) { width: 8%; }   /* Price */
-th:nth-child(4), td:nth-child(4) { width: 18%; }  /* Description */
-th:nth-child(5), td:nth-child(5) { width: 8%; }   /* Pre-book needed? */
-th:nth-child(6), td:nth-child(6) { width: 9%; }   /* Hours */
-th:nth-child(7), td:nth-child(7) { width: 6%; }   /* Distance */
-th:nth-child(8), td:nth-child(8) { width: 9%; }   /* Travel Time */
-th:nth-child(9), td:nth-child(9) { width: 20%; }  /* Directions */
-   /* Directions */
-    th {
-      background: #eaeaea;
-    }
-    @media (max-width: 600px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      th {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-      td {
-        padding-left: 1em;
-        padding-top: 0.5em;
-        border: none;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-      }
-    }
-  
-      td, th {
-        word-wrap: break-word;
-        min-width: 100px;
-      }
-    
-@media (max-width: 600px) {
-  td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    display: block;
-    opacity: 0.8;
-    margin-bottom: 2px;
+  :root{
+    --bg:#f5f5f5;
+    --card:#fff;
+    --muted:#eaeaea;
   }
-}
-  </style>
+  body{font-family:sans-serif;background:var(--bg);padding:1em;}
+  h1{text-align:center;margin:0.2em 0 0.8em;}
+  details{margin-bottom:1.2em;background:var(--card);border-radius:10px;padding:1em;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+  summary{font-size:1.2em;font-weight:700;cursor:pointer;}
+  /* Base table */
+  table{width:100%;border-collapse:collapse;margin-top:0.8em;table-layout:fixed}
+  th,td{padding:0.55em;text-align:left;border-bottom:1px solid #ccc;word-wrap:break-word}
+  th{background:var(--muted)}
+  /* Optimised desktop widths (balanced for readability) */
+  /* 10-col activity table */
+  .activity-table th:nth-child(1), .activity-table td:nth-child(1){width:18%;border:none;border-bottom:1px solid #ddd}
+    td::before{content:attr(data-label);font-weight:600;display:block;opacity:.85;margin-bottom:2px}
+    /* Relax widths on small screens */
+    .activity-table th, .activity-table td,
+    .simple-table th, .simple-table td{width:auto !important;min-width:0}
+  }
+  /* Improve min-width for long URLs on desktop */
+  td a{word-break:break-word}
+</style>
 </head>
 <body>
-<h1>
-   🎎 Korea Activities Guide 2025
-  </h1>
+<h1>🎎 Korea Activities Guide 2025</h1>
+
+<!-- BUSAN -->
 <details>
-<summary style="font-size: 1.2em; font-weight: bold; cursor: pointer;">
-    🏖️ Busan
-   </summary>
-<details>
-<summary style="font-weight: normal; color: crimson; font-size: 1.2em; cursor: pointer;">
-     ⭐ Activities
-    </summary>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Osaka Castle
-     </summary>
-<table>
-<thead>
+  <summary>🏖️ Busan</summary>
+
+  <details>
+    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Activities</summary>
+
+    <!-- Haeundae Sky Capsule (from File 2) -->
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Haeundae Sky Capsule – Blueline Park</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Sky Capsule (from Mipo)</td>
+            <td data-label="When: ">12 Sep 2025, 2:00 PM</td>
+            <td data-label="Price: ">$45.00 (one-way)</td>
+            <td data-label="Description: ">A colourful retro-style tram gliding 7–10&nbsp;m above Busan’s coastline between Mipo and Cheongsapo (2.3&nbsp;km). Private capsule fits up to 4; iconic ocean views, best near sunset.<br/>Booking ID: RS25015207817.</td>
+            <td data-label="Hours: ">2:00 PM</td>
+            <td data-label="Distance: ">2.3 km route</td>
+            <td data-label="Travel Time: ">20–30 min (OW)</td>
+            <td data-label="Booking: "><a href="https://www.bluelinepark.com/eng/booking.do" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: "><a href="http://tket.me/GlVYFUx" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Directions: ">Start at Mipo Station (near Haeundae Beach) or Cheongsapo Station. Arrive 10–15 minutes early.</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <!-- Haeundae Beach Train (new) -->
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Haeundae Beach Train – Blueline Park</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: ">Haeundae Beach Train (Sema)</td>
+            <td data-label="When: ">12 Sep 2025, 4:30 PM</td>
+            <td data-label="Price: ">$14.00 (round-trip)</td>
+            <td data-label="Description: ">
+              Scenic shared tram along Busan’s coast with large windows and multiple stops across the 4.8&nbsp;km route (Mipo ⇄ Cheongsapo ⇄ Songjeong). Ideal for families; self‑guided.<br/>
+              Booking ID: RS25015208358.
+            </td>
+            <td data-label="Hours: ">9:30 AM to 7:30 PM</td>
+            <td data-label="Distance: ">4.8 km route</td>
+            <td data-label="Travel Time: ">60 min (RT) / 20–30 min (OW)</td>
+            <td data-label="Booking: "><a href="https://www.bluelinepark.com/eng/beachTramCourse.do" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: "><a href="http://tket.me/5C4Bxid" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Directions: ">
+              Start at any station – Mipo, Cheongsapo, or Songjeong. First train 9:30&nbsp;AM; last ~7:30–8:00&nbsp;PM (seasonal). Every 30&nbsp;min. One‑way tickets are not hop‑on/hop‑off. No assigned seats; arrive early for best views.
+            </td>
+          </tr>
 <tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.osakacastle.net/" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Osaka Castle
-         </a>
-<a href="https://ars-osakacastle.triplabo.jp/activity/en/LINKTIVITY-E4UL8" rel="noopener noreferrer" style="margin-left:6px; font-weight:600; text-decoration: underline;" target="_blank">
-          🎟️ Tickets
-         </a>
-</td>
-<td data-label="When:">
-         Morning
-        </td>
-<td data-label="Price: ">
-         Price: ¥600
-        </td>
-<td data-label="Description: ">
-         Description: Best visited early morning to avoid crowds and enjoy the park
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: Yes
-        </td>
-<td data-label="Open:">
-         9:00 AM - 5:00 PM
-        </td>
-<td data-label="Distance from Shin-Osaka Station: ">
-         Distance: 6.0 km
-        </td>
-<td data-label="Travel time from Shin-Osaka Station: ">
-         Travel Time: 28 min
-        </td>
-<td data-label="From Shin-Osaka Station: ">
-         From Shin-Osaka Station – From Osaka Station, take the JR Osaka Loop Line to Osakajokoen Station, then a 15-minute walk to the castle
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Universal Studios Japan
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.usj.co.jp/web/en/us" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Universal Studios Japan
-         </a>
-<a href="https://www.usjticketing.com/" rel="noopener noreferrer" style="margin-left:6px; font-weight:600; text-decoration: underline;" target="_blank">
-          🎟️ Tickets
-         </a>
-</td>
-<td data-label="When:">
-         Morning
-        </td>
-<td data-label="Price: ">
-         Price: ¥8,400 to 9,400
-        </td>
-<td data-label="Description: ">
-         Description: Arrive early to maximize time and avoid long lines
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: Yes
-        </td>
-<td data-label="Open:">
-         9:00 AM - 8:00 PM
-        </td>
-<td data-label="Distance from Shin-Osaka Station: ">
-         Distance: 13 km
-        </td>
-<td data-label="Travel time from Shin-Osaka Station: ">
-         Travel Time: 41 min
-        </td>
-<td data-label="From Shin-Osaka Station: ">
-         From Shin-Osaka Station – 5-minute walk from Universal City Station on the JR Yumesaki Line
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-</details><details>
-<summary style="font-weight: normal; color: crimson; font-size: 1.2em; cursor: pointer;">
-     ⭐ Shopping
-    </summary>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Ginza
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Ginza
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Luxury shopping district featuring flagship stores and department stores.
-        </td>
-<td>
-<a href="https://youtu.be/qsUSlUT8B3c" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Shibuya 109
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.gotokyo.org/en/spot/66/index.html" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Shibuya 109
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Trendy fashion mall catering to youth culture in Shibuya.
-        </td>
-<td>
-<a href="https://youtu.be/OxxBWyGygls" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Harajuku Takeshita Street
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Harajuku Takeshita Street
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Youth fashion and colourful subculture shops in a pedestrian-only alley.
-        </td>
-<td>
-<a href="https://youtu.be/p9poky-szGw" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Omotesando
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Omotesando
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Tokyo's upscale shopping boulevard with elegant flagship stores.
-        </td>
-<td>
-<a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Nakamise Shopping Street (Asakusa)
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Nakamise Shopping Street (Asakusa)
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Traditional market street with snacks, crafts, and souvenirs.
-        </td>
-<td>
-<a href="https://www.youtube.com/watch?v=g_CAMut_8MY" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-</details>
-</details>
-<details>
-<summary style="font-size: 1.2em; font-weight: bold; cursor: pointer;">
+            <td data-label="Activity: ">Haeundae Beach Train (Gavin)</td>
+            <td data-label="When: ">12 Sep 2025, 4:30 PM</td>
+            <td data-label="Price: ">$14.00 (round-trip)</td>
+            <td data-label="Description: ">
+              Scenic shared tram along Busan’s coast with large windows and multiple stops across the 4.8&nbsp;km route (Mipo ⇄ Cheongsapo ⇄ Songjeong). Ideal for families; self‑guided.<br/>
+              Booking ID: RS25016056428.
+            </td>
+            <td data-label="Hours: ">9:30 AM to 7:30 PM</td>
+            <td data-label="Distance: ">4.8 km route</td>
+            <td data-label="Travel Time: ">60 min (RT) / 20–30 min (OW)</td>
+            <td data-label="Booking: "><a href="https://www.bluelinepark.com/eng/beachTramCourse.do" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: "><a href="https://www.tbluelinepark.com/m/mobileTicket/RS25016056428/47BC01F0B4D4A164E73C7A471319B5336BECE29619EA9D0B9B67853B3EE50145" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Directions: ">
+              Start at any station – Mipo, Cheongsapo, or Songjeong. First train 9:30&nbsp;AM; last ~7:30–8:00&nbsp;PM (seasonal). Every 30&nbsp;min. One‑way tickets are not hop‑on/hop‑off. No assigned seats; arrive early for best views.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
 
 
+    <!-- Osaka Castle (kept once) --><!-- Universal Studios Japan (kept once) --></details>
+
+  <!-- Shopping (deduplicated; appears once in the whole document) -->
+  <details>
+    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Shopping</summary>
+
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Ginza</summary>
+      <table>
+        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Ginza</a></td>
+            <td style="font-weight: normal;">Luxury shopping district featuring flagship stores and department stores.</td>
+            <td><a href="https://youtu.be/qsUSlUT8B3c" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td><a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Shibuya 109</summary>
+      <table>
+        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.gotokyo.org/en/spot/66/index.html" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Shibuya 109</a></td>
+            <td style="font-weight: normal;">Trendy fashion mall catering to youth culture in Shibuya.</td>
+            <td><a href="https://youtu.be/OxxBWyGygls" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td><a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Harajuku Takeshita Street</summary>
+      <table>
+        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Harajuku Takeshita Street</a></td>
+            <td style="font-weight: normal;">Youth fashion and colourful subculture shops in a pedestrian‑only alley.</td>
+            <td><a href="https://youtu.be/p9poky-szGw" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td><a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Omotesando</summary>
+      <table>
+        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Omotesando</a></td>
+            <td style="font-weight: normal;">Tokyo's upscale shopping boulevard with elegant flagship stores.</td>
+            <td><a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td><a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">Nakamise Shopping Street (Asakusa)</summary>
+      <table>
+        <thead><tr><th>Activity</th><th>About</th><th>Video</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" target="_blank" rel="noopener noreferrer" style="color:#DC143C;font-weight:bold;text-decoration:underline;">Nakamise Shopping Street (Asakusa)</a></td>
+            <td style="font-weight: normal;">Traditional market street with snacks, crafts, and souvenirs.</td>
+            <td><a href="https://www.youtube.com/watch?v=g_CAMut_8MY" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Video</a></td>
+            <td><a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" target="_blank" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;">Map</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  </details>
+</details>
+
+<!-- SEOUL -->
+<details>
+  <summary>🌆 Seoul</summary>
+
+  <details>
+    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Activities</summary>
+
+    <!-- DMZ Tour (from File 1) -->
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">DMZ Tour: 3rd Tunnel, Option (Suspension Bridge, Boat) from Seoul</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=707857&cityId=14690&currency=AUD&cid=1909478&enrichedOfferId=1394609&pax=8_1&offerOptionId=0&travelDate=2025-09-09" target="_blank" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;">DMZ Tour</a></td>
+            <td data-label="When: ">09 Sep 2025, 7:00 AM</td>
+            <td data-label="Price: ">$40.85 Each</td>
+            <td data-label="Description: ">Location: Myeongdong Subway station (Exit 5 outside).<br/>Booking ID: 1911038590.<br/>Provider: <a href="tel:+821075378290">+82 10 7537 8290</a>.<br/>Other: Tour operator confirmation no VIA-67178241. Product code 789637.</td>
+            <td data-label="Hours: ">6 hours</td>
+            <td data-label="Distance: ">6.0 km</td>
+            <td data-label="Travel Time: ">28 min</td>
+            <td data-label="Booking: "><a href="https://www.agoda.com/en-au/account/bookingdetails?products=activities&bookingToken=Hzfyyo8DDOJacOm%2BjsdaFkpSGLwgb0JfHlTtcJa3wvlTo1h5Z6oFc0YsaxE7JUug" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Voucher: "><a href="https://api.viator.com/ticket?code=1661031071:5e510b7a7a440aefa811365d38b981fb66daf75c5f02f1e69bcc19d658bbda08:1277138297" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a></td>
+            <td data-label="Directions: ">Meet at Myeongdong Subway Station Exit 5 (street level). Please arrive 10 minutes early.</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <!-- N Seoul Tower + Namsan Cable Car (new) -->
+    <details>
+      <summary style="font-weight: normal; color: darkblue;">N Seoul Tower + Namsan Cable Car</summary>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>Activity</th><th>When</th><th>Price</th><th>Description</th><th>Hours</th><th>Distance</th><th>Travel Time</th><th>Booking</th><th>Voucher</th><th>Directions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity: "><a href="https://www.agoda.com/en-au/activities/detail?activityId=1147878&cityId=14690&currency=AUD&cid=1909478&enrichedOfferId=2118987&pax=9_2&offerOptionId=0&travelDate=2025-09-16" target="_blank" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;">N Seoul Tower + Cable Car (Round-trip)</a></td>
+            <td data-label="When: ">16 Sep 2025, 10:30 AM</td>
+            <td data-label="Price: ">$36.13 (per person) / $72.26 (2 ppl)</td>
+            <td data-label="Description: ">
+              Self-guided visit to one of Seoul’s highest viewpoints via Namsan Cable Car, then panoramic vistas from N Seoul Tower. Includes access to “Locks of Love” and photo spots.<br/>
+              Voucher valid until 31&nbsp;Dec&nbsp;2025. Booking ID: 1911039184.
+            </td>
+            <td data-label="Hours: ">Suggested 2–3 hours. Cable car/observatory typically 10:30&nbsp;AM–10:30&nbsp;PM.</td>
+            <td data-label="Distance: ">—</td>
+            <td data-label="Travel Time: ">60 min (RT) / 20–30 min (OW)</td>
+            <td data-label="Booking: ">
+              <a href="https://www.agoda.com/en-au/account/bookingdetails?products=activities&bookingToken=Hzfyyo8DDOJacOm%2BjsdaFtqY%2BfO57D4FxEWwFrCjnTpBW75tlDqVQ9ElrF1R7YIB" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Booking</a></td>
+            <td data-label="Voucher: ">
+              <a href="https://klook.klktech.com/en-US/voucher-new/b64be2bc-227e-44bf-547b-8d42d35ea679?lang=en_US" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">URL</a>
+            </td>
+            <td data-label="Directions: ">
+              Ticket pickup required at <strong>Rednow Studio (Myeongdong)</strong> before visiting. Then take the Namsan Cable Car to N Seoul Tower; elevator access to observatory included.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
 
 
-    🌆 Seoul
-   </summary>
-<details>
-<summary style="font-weight: normal; color: crimson; font-size: 1.2em; cursor: pointer;">
-     ⭐ Activities
-    </summary>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Asakusa Sensoji Temple
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.japan-guide.com/e/e3001.html#section_admission" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Asakusa Sensoji Temple
-         </a>
-</td>
-<td data-label="When:">
-         Early Morning
-        </td>
-<td data-label="Price: ">
-         Price: Free
-        </td>
-<td data-label="Description: ">
-         Description: Best visited in early morning to avoid crowds and experience the temple’s serene atmosphere
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: N/R
-        </td>
-<td data-label="Open:">
-         6:00 to 17:00
-        </td>
-<td data-label="Distance from Tokyo Station: ">
-         Distance: 10 km
-        </td>
-<td data-label="Travel time from Tokyo Station: ">
-         Travel Time: 33 min
-        </td>
-<td data-label="From Tokyo Station: ">
-         From Tokyo Station – From Asakusa Station, it’s a short walk to the temple
-        </td>
-</tr>
-</tbody>
-</table>
+    <!-- N Seoul Tower with Namsan Cable Car (new) --><!-- Asakusa Sensoji Temple --><!-- Ghibli Museum --><!-- Imperial Palace --><!-- Meiji Jingu Shrine --><!-- Shibuya Crossing --></details>
 </details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Ghibli Museum
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.ghibli-museum.jp/en/welcome/" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Ghibli Museum
-         </a>
-<a href="https://www.ghibli-museum.jp/en/tickets/" rel="noopener noreferrer" style="margin-left:6px; font-weight:600; text-decoration: underline;" target="_blank">
-          🎟️ Tickets
-         </a>
-</td>
-<td data-label="When:">
-         One month in advance
-        </td>
-<td data-label="Price: ">
-         Price: ¥1,000
-        </td>
-<td data-label="Description: ">
-         Description: Tickets are hard to secure, highly recommended for Studio Ghibli fans
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: Yes
-        </td>
-<td data-label="Open:">
-         10:00 AM - 6:00 PM
-        </td>
-<td data-label="Distance from Tokyo Station: ">
-         Distance: 24 km
-        </td>
-<td data-label="Travel time from Tokyo Station: ">
-         Travel Time: 56 min
-        </td>
-<td data-label="From Tokyo Station: ">
-         From Tokyo Station – Accessible by train to Mitaka Station
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Imperial Palace
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.japan-guide.com/e/e3017.html" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Imperial Palace
-         </a>
-</td>
-<td data-label="When:">
-         January 2nd and February 23rd
-        </td>
-<td data-label="Price: ">
-         Price: Free
-        </td>
-<td data-label="Description: ">
-         Description: Home to Japan’s royal family, entry allowed on specific dates
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: N/R
-        </td>
-<td data-label="Open:">
-         24 hours
-        </td>
-<td data-label="Distance from Tokyo Station: ">
-         Distance: 5.2 km
-        </td>
-<td data-label="Travel time from Tokyo Station: ">
-         Travel Time: 22 min
-        </td>
-<td data-label="From Tokyo Station: ">
-         From Tokyo Station – Near Tsukiji and Toyosu Fish Markets and Akihabara neighborhood
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Meiji Jingu Shrine
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.meijijingu.or.jp/en/visit/" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Meiji Jingu Shrine
-         </a>
-</td>
-<td data-label="When:">
-         All year round
-        </td>
-<td data-label="Price: ">
-         Price: Free
-        </td>
-<td data-label="Description: ">
-         Description: Tranquil area with traditional art collections at Nezu Museum
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: N/R
-        </td>
-<td data-label="Open:">
-         24 hours
-        </td>
-<td data-label="Distance from Tokyo Station: ">
-         Distance: 8.5 km
-        </td>
-<td data-label="Travel time from Tokyo Station: ">
-         Travel Time: 30 min
-        </td>
-<td data-label="From Tokyo Station: ">
-         From Tokyo Station – Located in Shibuya neighborhood
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Shibuya Crossing
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         When
-        </th>
-<th>
-         Price
-        </th>
-<th>
-         Description
-        </th>
-<th>
-         Pre-book needed?
-        </th>
-<th>
-         Hours
-        </th>
-<th>
-         Distance
-        </th>
-<th>
-         Travel Time
-        </th>
-<th>
-         Directions
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.japan-guide.com/e/e3007.html" rel="noopener noreferrer" style="color:#DC143C; text-decoration: underline;" target="_blank">
-          Shibuya Crossing
-         </a>
-</td>
-<td data-label="When:">
-         Evening
-        </td>
-<td data-label="Price: ">
-         Price: Free
-        </td>
-<td data-label="Description: ">
-         Description: Most vibrant in the evening with neon lights and crowds
-        </td>
-<td data-label="Pre-book: ">
-         Pre-book: N/R
-        </td>
-<td data-label="Open:">
-         24 hours
-        </td>
-<td data-label="Distance from Tokyo Station: ">
-         Distance: 7.5 km
-        </td>
-<td data-label="Travel time from Tokyo Station: ">
-         Travel Time: 26 min
-        </td>
-<td data-label="From Tokyo Station: ">
-         From Tokyo Station – From Shibuya Station, it’s a short walk to the crossing
-        </td>
-</tr>
-</tbody>
-</table>
-</details>
-</details>
-<details>
-<summary style="font-weight: normal; color: crimson; font-size: 1.2em; cursor: pointer;">
-     ⭐ Shopping
-    </summary>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Ginza
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Ginza
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Luxury shopping district featuring flagship stores and department stores.
-        </td>
-<td>
-<a href="https://youtu.be/qsUSlUT8B3c" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/XxLPtSP5rit5yMuR7" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Shibuya 109
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.gotokyo.org/en/spot/66/index.html" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Shibuya 109
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Trendy fashion mall catering to youth culture in Shibuya.
-        </td>
-<td>
-<a href="https://youtu.be/OxxBWyGygls" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/9NWkh1S76rKoVR7u8" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Harajuku Takeshita Street
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://tokyocheapo.com/entertainment/harajuku-takeshita-street-guide/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Harajuku Takeshita Street
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Youth fashion and colourful subculture shops in a pedestrian-only alley.
-        </td>
-<td>
-<a href="https://youtu.be/p9poky-szGw" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/qxiGjn5xHL8uEPG17" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Omotesando
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://tokyocheapo.com/locations/central-tokyo/omotesando/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Omotesando
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Tokyo's upscale shopping boulevard with elegant flagship stores.
-        </td>
-<td>
-<a href="https://www.youtube.com/watch?v=BeNhG7c7B8E" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/sDDZeb5CvVFLi9FZA" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary style="font-weight: normal; color: darkblue;">
-      Nakamise Shopping Street (Asakusa)
-     </summary>
-<table>
-<thead>
-<tr>
-<th>
-         Activity
-        </th>
-<th>
-         About
-        </th>
-<th>
-         Video
-        </th>
-<th>
-         Map
-        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://www.asakusastation.com/nakamise-shopping-street-asakusa/" rel="noopener noreferrer" style="color:#DC143C; font-weight:bold; text-decoration: underline;" target="_blank">
-          Nakamise Shopping Street (Asakusa)
-         </a>
-</td>
-<td style="font-weight: normal;">
-         Traditional market street with snacks, crafts, and souvenirs.
-        </td>
-<td>
-<a href="https://www.youtube.com/watch?v=g_CAMut_8MY" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Video
-         </a>
-</td>
-<td>
-<a href="https://maps.app.goo.gl/WrHJfUrmigvYueXh8" rel="noopener noreferrer" style="font-weight:bold; text-decoration: underline;" target="_blank">
-          Map
-         </a>
-</td>
-</tr>
-</tbody>
-</table>
-</details>
-</details>
+
 <script>
-   if ('serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
         const reg = await navigator.serviceWorker.register('/GJN-2025-activities/service-worker.js');
@@ -1110,6 +297,15 @@ th:nth-child(9), td:nth-child(9) { width: 20%; }  /* Directions */
       alert('You are offline. This link needs an internet connection.');
     }
   });
-  </script>
-</details></body>
+</script>
+
+
+<script>
+  // Ensure all <details> are collapsed on initial load
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('details[open]').forEach(d => d.removeAttribute('open'));
+  });
+</script>
+
+</body>
 </html>
