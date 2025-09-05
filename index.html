@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>🎎 Korea Activities Guide 2025</title>
+<title>🏛️ Korea Activities Guide 2025</title>
 <link rel="manifest" href="/GJN-2025-activities/assets/manifest.json"/>
 <link rel="icon" type="image/png" href="/GJN-2025-activities/assets/icons/icon-192x192.png"/>
 <link rel="apple-touch-icon" href="/GJN-2025-activities/assets/icons/icon-192x192.png"/>
@@ -47,14 +47,12 @@
 </style>
 </head>
 <body>
-<h1>🎎 Korea Activities Guide 2025</h1>
 
-<!-- BUSAN -->
+<h1>🏛️ Korea Activities Guide 2025</h1>
+
 <details>
-  <summary>🏖️ Busan</summary>
-
-  <details>
-    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Activities</summary>
+  <summary style="font-size: 1.2em; font-weight: bold;">🏖️ Busan</summary>
+  
 
     <!-- Haeundae Sky Capsule (from File 2) -->
     <details>
@@ -258,20 +256,12 @@
       </table>
     </details>
 
+
 </details>
 
-
-    <!-- Osaka Castle (kept once) --><!-- Universal Studios Japan (kept once) --></details>
-
-  <!-- Shopping (deduplicated; appears once in the whole document) -->
-  
-
-<!-- SEOUL -->
 <details>
-  <summary>🌆 Seoul</summary>
-
-  <details>
-    <summary style="font-weight: normal; color: crimson; font-size: 1.2em;">⭐ Activities</summary>
+  <summary style="font-size: 1.2em; font-weight: bold;">🌆 Seoul</summary>
+  
 
     <!-- DMZ Tour (from File 1) -->
     <details>
@@ -334,43 +324,9 @@
     </details>
 
 
-    <!-- N Seoul Tower with Namsan Cable Car (new) --><!-- Asakusa Sensoji Temple --><!-- Ghibli Museum --><!-- Imperial Palace --><!-- Meiji Jingu Shrine --><!-- Shibuya Crossing --></details>
+    <!-- N Seoul Tower with Namsan Cable Car (new) --><!-- Asakusa Sensoji Temple --><!-- Ghibli Museum --><!-- Imperial Palace --><!-- Meiji Jingu Shrine --><!-- Shibuya Crossing -->
 </details>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', async () => {
-      try {
-        const reg = await navigator.serviceWorker.register('/GJN-2025-activities/service-worker.js');
-        reg.update();
-        setInterval(() => reg.update(), 30 * 60 * 1000);
-        navigator.serviceWorker.addEventListener('message', (event) => {
-          if (event.data && event.data.type === 'NEW_VERSION_ACTIVATED') {
-            location.reload();
-          }
-        });
-      } catch (e) { console.error('SW registration failed:', e); }
-    });
-  }
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[href]');
-    if (!a) return;
-    const url = new URL(a.href, location.href);
-    const sameOrigin = url.origin === location.origin && url.pathname.startsWith('/GJN-2025-activities/');
-    if (!sameOrigin && !navigator.onLine) {
-      e.preventDefault();
-      alert('You are offline. This link needs an internet connection.');
-    }
-  });
-</script>
-
-
-<script>
-  // Ensure all <details> are collapsed on initial load
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('details[open]').forEach(d => d.removeAttribute('open'));
-  });
-</script>
 
 </body>
 </html>
